@@ -1,0 +1,62 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.logo{
+
+    display: flex;
+    align-content: stretch;
+    background-color: rgba(81, 124, 134, 0.856);
+    margin: 5px;
+    border-radius: 20px;
+}
+
+a{
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    background-color: rgb(214, 181, 175);
+    margin: 10px;
+    border-radius: 50%;
+    line-height: 105px;
+    box-shadow: 1px 4px 2px 2px rgba(134, 125, 123, 0.452);
+    position: relative;
+    overflow: hidden;
+}
+.fa-facebook{
+    color:#3b5898ec;
+}
+ .fa-instagram{
+    color: #ea4435e8;
+}
+.fa-twitter{
+    color:#00abeee7;
+}
+.fa-youtube{
+    color:#e40d0de1;
+}
+a:hover .fa {
+    transform: scale(1.3);
+    transition: all .4s linear;
+}
+a:before{
+    content: "";
+
+    width:120%;
+    height:120%;
+    background-color:rgb(224, 107, 185);
+    position: absolute;
+    left: -40%;
+    top: 95%;
+    transform:rotate(60deg);
+}
+a:hover::before{
+    animation:socialicon 0.8s 1;
+    animation-fill-mode:both;
+
+}
+@keyframes socialicon{
+    0%{top:95%; left:-40%}
+    50%{top:-55%; left:-10%;}
+    100%{ top:-10%; left:-10%}
+}

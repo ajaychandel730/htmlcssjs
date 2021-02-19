@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>preandnextbutton</title>
+    <link rel="stylesheet" href="prenxt.css">
+</head>
+<body>
+    <ul class="pagination" >
+        <li><a href="#" class="prev">prev</a></li>
+        <li class="pageNumber active"><a href="#">1</a></li>
+        <li class="pageNumber "><a href="https://www.youtube.com">2</a></li>
+        <li class="pageNumber "><a href="https://www.instagram.com">3</a></li>
+        <li class="pageNumber "><a href="#">4</a></li>
+        <li class="pageNumber "><a href="#">5</a></li>
+        <li class="pageNumber "><a href="#">6</a></li>
+        <li ><a href="#" class="next">next</a></li>
+    </ul>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+    
+            $('.next').click(function(){
+                $('.pagination').find('.pageNumber.active').next().addClass('active')
+                $('.pagination').find('.pageNumber.active').prev().removeClass('active')
+            })
+        
+        $(document).ready(function(){
+            $('.prev').click(function(){
+                $('.pagination').find('.pageNumber.active').prev().addClass('active')
+                $('.pagination').find('.pageNumber.active').next().removeClass('active')
+            })
+        })
+        
+      </script>
+</body>
+   
+</html>
